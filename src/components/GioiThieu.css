@@ -1,0 +1,146 @@
+.gioithieu-container {
+  padding-top: 80px;
+  background: #fff8f0;
+}
+
+.gt-hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #b30000, #7a0000);
+  color: #ffd700;
+}
+
+.gt-hero h1 {
+  font-size: 42px;
+  letter-spacing: 2px;
+}
+
+/* Section Layout */
+.gt-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  gap: 60px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 0.5s ease;
+}
+
+.gt-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.gt-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gt-img img {
+  width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.gt-content {
+  max-width: 500px;
+}
+
+.gt-content h2 {
+  font-size: 28px;
+  color: #b30000;
+  margin-bottom: 20px;
+}
+
+.gt-content p {
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gt-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gt-section.reverse {
+    flex-direction: column;
+  }
+
+  .gt-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+.gt-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gt-title p {
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.gt-content.full {
+  width: 100%;
+  text-align: center;
+}
+
+.gt-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.gt-list li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+blockquote {
+  margin-top: 30px;
+  font-style: italic;
+  font-size: 20px;
+  opacity: 0.8;
+}
+.gioithieu-container {
+  padding: 80px 10%;
+}
+
+.gt-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gt-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.gt-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gt-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.gt-img img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.gt-content {
+  flex: 1;
+}

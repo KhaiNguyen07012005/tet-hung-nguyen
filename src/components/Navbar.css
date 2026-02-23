@@ -1,0 +1,93 @@
+/* NAVBAR BASE */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+/* Khi scroll */
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu-item {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  transition: 0.3s;
+}
+
+/* Hover glow */
+.menu-item:hover {
+  color: #ffd700;
+}
+
+/* Underline animation */
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffd700;
+  transition: width 0.3s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+/* Active */
+.menu-item.active {
+  color: #ffd700;
+}
+
+.menu-item.active::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .menu {
+    gap: 15px;
+  }
+
+  .menu-item {
+    font-size: 14px;
+  }
+}

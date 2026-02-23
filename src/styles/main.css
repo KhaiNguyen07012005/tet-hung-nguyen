@@ -1,0 +1,126 @@
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-red: #c40000;
+  --dark-red: #8b0000;
+  --gold: #ffd700;
+  --cream: #fff5e6;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: var(--cream);
+}
+
+
+/* ===== NAVBAR ===== */
+.navbar {
+  height: 70px;
+  background: var(--primary-red);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--gold);
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--gold);
+}
+
+/* ===== HOME ===== */
+.home {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--primary-red), var(--dark-red));
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--primary-red);
+  padding: 12px 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+  }
+
+  .menu {
+    margin-top: 10px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #ffd700;
+  width: 0%;
+  z-index: 2000;
+}
