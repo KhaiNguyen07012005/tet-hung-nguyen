@@ -1,3 +1,14 @@
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: gold;
+  z-index: 1000;
+  transition: width 0.2s ease;
+}
+
 /* NAVBAR BASE */
 .navbar {
   position: fixed;
@@ -9,23 +20,24 @@
   align-items: center;
   z-index: 999;
 
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(90deg, #8b0000, #b22222);
+  border-bottom: 2px solid gold;
   transition: all 0.4s ease;
 }
 
-/* Khi scroll */
+/* When scroll */
 .navbar.scrolled {
-  background: rgba(0, 0, 0, 0.6);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(90deg, #6b0000, #8b0000);
+  box-shadow: 0 5px 25px rgba(255, 215, 0, 0.4);
 }
 
 /* LOGO */
 .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #ffd700;
+  font-size: 22px;
+  font-weight: 700;
+  color: gold;
   cursor: pointer;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
   transition: 0.3s;
 }
 
@@ -47,9 +59,9 @@
   transition: 0.3s;
 }
 
-/* Hover glow */
+/* Hover */
 .menu-item:hover {
-  color: #ffd700;
+  color: gold;
 }
 
 /* Underline animation */
@@ -60,21 +72,27 @@
   left: 0;
   width: 0%;
   height: 2px;
-  background: #ffd700;
+  background: gold;
   transition: width 0.3s ease;
 }
 
-.menu-item:hover::after {
-  width: 100%;
-}
-
-/* Active */
-.menu-item.active {
-  color: #ffd700;
-}
-
+.menu-item:hover::after,
 .menu-item.active::after {
   width: 100%;
+}
+
+/* Active glow */
+.menu-item.active {
+  color: gold;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: gold;
+  cursor: pointer;
 }
 
 /* Responsive */
@@ -84,10 +102,24 @@
   }
 
   .menu {
-    gap: 15px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #8b0000;
+    flex-direction: column;
+    width: 220px;
+    padding: 20px;
+    gap: 20px;
+    transform: translateY(-200%);
+    transition: 0.4s ease;
+    border-left: 2px solid gold;
   }
 
-  .menu-item {
-    font-size: 14px;
+  .menu.open {
+    transform: translateY(0);
+  }
+
+  .hamburger {
+    display: block;
   }
 }

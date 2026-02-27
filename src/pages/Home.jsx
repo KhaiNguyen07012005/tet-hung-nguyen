@@ -8,6 +8,7 @@ import AmThuc from "../components/AmThuc";
 import VanHoa from "../components/VanHoa";
 import Album from "../components/Album";
 import Footer from "../components/Footer";
+import KyUc from "../components/KyUc";
 
 
 function Home() {
@@ -185,7 +186,9 @@ function Home() {
         <AmThuc />
         <VanHoa />
         <Album />
-        <Footer />
+ 
+        <KyUc />
+               <Footer />
 
     </div>
   );

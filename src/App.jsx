@@ -2,12 +2,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import "./styles/main.css";
-import GioiThieu from "./components/GioiThieu";
+
+
 
 
 function App() {
   
-  return (
+  return (  
     
     <BrowserRouter>
  

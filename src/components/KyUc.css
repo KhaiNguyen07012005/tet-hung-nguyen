@@ -1,0 +1,122 @@
+.kyuc-wrapper {
+  padding: 100px 40px;
+  background: #f6f3ee;
+  position: relative;
+}
+
+.kyuc-heading {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #222;
+}
+
+/* CARD */
+.kyuc-card {
+  height: 260px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.kyuc-card:hover {
+  transform: scale(1.03);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.2)
+  );
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.kyuc-date {
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.overlay h3 {
+  margin: 10px 0;
+  font-size: 24px;
+}
+
+.overlay p {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* MODAL */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  width: 600px;
+  max-width: 90%;
+  animation: scaleUp 0.4s ease;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+}
+
+.modal-date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  background: #b22222;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-content button:hover {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Swiper arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}

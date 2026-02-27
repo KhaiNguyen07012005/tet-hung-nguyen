@@ -1,29 +1,50 @@
+import { useEffect } from "react";
 import "./AmThuc.css";
 import banhChung from "../assets/banhchung.jpg";
 import duamuoi from "../assets/duamuoi.jpg";
 
-
-
 function AmThuc() {
-  return (
-    <section id="am-thuc" className="amthuc-section fade-section">
-      <h2 className="section-title">Ẩm thực Tết Nghệ An</h2>
+  useEffect(() => {
+    const items = document.querySelectorAll(".food-item");
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    items.forEach((item) => observer.observe(item));
+  }, []);
+
+  return (
+    <section id="am-thuc" className="amthuc-section">
+      <h2 className="section-title">Ẩm thực Tết Hưng Nguyên</h2>
+      <p className="section-sub">
+        Mỗi món ăn là một câu chuyện, mỗi hương vị là một ký ức mùa xuân.
+      </p>
+
+      {/* BÁNH CHƯNG */}
       <div className="food-item">
         <div className="food-img">
-      <img src={banhChung} alt="Bánh chưng" />
+          <img src={banhChung} alt="Bánh chưng" />
         </div>
         <div className="food-content">
+          <span className="tag">Truyền thống</span>
           <h3>Bánh chưng – Hơi ấm đêm cuối năm</h3>
           <p>
-            Bánh chưng được gói từ những ngày giáp Tết.
-            Cả gia đình quây quần bên bếp lửa đỏ rực suốt đêm,
-            tiếng củi cháy lách tách giữa tiết trời se lạnh.
-            Không chỉ là món ăn, đó là ký ức tuổi thơ.
+            Đêm 29 Tết, cả nhà quây quần bên nồi bánh nghi ngút khói.
+            Không chỉ là món ăn, đó là ký ức tuổi thơ,
+            là sự gắn kết gia đình và hương vị quê hương.
           </p>
         </div>
       </div>
 
+      {/* GIÒ LỤA */}
       <div className="food-item reverse">
         <div className="food-img">
           <img
@@ -32,32 +53,67 @@ function AmThuc() {
           />
         </div>
         <div className="food-content">
-          <h3>Giò lụa – Sự tròn đầy</h3>
+          <span className="tag">Mâm cỗ Tết</span>
+          <h3>Giò lụa – Sự tròn đầy viên mãn</h3>
           <p>
-            Giò lụa thơm mùi tiêu, cắt ra mịn và chắc.
-            Là biểu tượng của sự đủ đầy, viên mãn.
-            Mâm cơm Tết không có giò coi như chưa trọn vẹn.
+            Giò lụa thơm mùi tiêu, chắc và mịn.
+            Là biểu tượng của sự đầy đủ, sum vầy.
+            Mâm cơm Tết thiếu giò là thiếu đi một phần linh hồn.
           </p>
         </div>
       </div>
 
+      {/* DƯA HÀNH */}
       <div className="food-item">
         <div className="food-img">
+          <img src={duamuoi} alt="Dưa hành" />
+        </div>
+        <div className="food-content">
+          <span className="tag">Cân bằng vị</span>
+          <h3>Dưa hành – Nhẹ mà không thể thiếu</h3>
+          <p>
+            Vị chua thanh giúp cân bằng vị béo của thịt và bánh.
+            Một món nhỏ nhưng làm nên sự hài hòa cho cả mâm cỗ.
+          </p>
+        </div>
+      </div>
+
+      {/* THỊT ĐÔNG */}
+      <div className="food-item reverse">
+        <div className="food-img">
           <img
-            src={duamuoi}
-            alt="Dưa hành"
+            src="https://cdn.tgdd.vn/2021/01/CookProduct/1200-1200x676-2.jpg"
+            alt="Thịt đông"
           />
         </div>
         <div className="food-content">
-          <h3>Dưa hành – Vị chua giữ trọn hương Tết</h3>
+          <span className="tag">Miền Bắc</span>
+          <h3>Thịt đông – Hương vị mùa lạnh</h3>
           <p>
-            Dưa hành giòn nhẹ, chua thanh,
-            giúp cân bằng vị béo ngày Tết.
-            Một món nhỏ thôi nhưng làm mâm cơm trở nên hài hòa.
+            Trong tiết trời se lạnh Nghệ An, thịt đông mềm,
+            trong veo như thạch, ăn kèm dưa hành là đúng bài.
           </p>
         </div>
       </div>
 
+      {/* BÁNH TỔ / BÁNH KHẢO */}
+      <div className="food-item">
+        <div className="food-img">
+          <img
+            src="https://cdn.tgdd.vn/2020/01/CookRecipe/GalleryStep/banh-khao-thumb-620x620.jpg"
+            alt="Bánh khảo"
+          />
+        </div>
+        <div className="food-content">
+          <span className="tag">Ngọt ngày xuân</span>
+          <h3>Bánh khảo – Ngọt dịu đầu năm</h3>
+          <p>
+            Vị ngọt thanh, mềm mịn.
+            Miếng bánh nhỏ nhưng chứa đựng sự tinh tế
+            của bàn tay người làm bánh quê nhà.
+          </p>
+        </div>
+      </div>
     </section>
   );
 }

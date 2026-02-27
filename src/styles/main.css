@@ -26,6 +26,9 @@ html, body, #root {
   font-family: Arial, sans-serif;
   background-color: var(--cream);
 }
+html {
+  scroll-behavior: smooth;
+}
 
 
 /* ===== NAVBAR ===== */
