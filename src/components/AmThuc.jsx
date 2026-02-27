@@ -96,24 +96,44 @@ function AmThuc() {
         </div>
       </div>
 
-      {/* BÁNH TỔ / BÁNH KHẢO */}
+      {/* NEM CHUA */}
       <div className="food-item">
         <div className="food-img">
           <img
-            src="https://cdn.tgdd.vn/2020/01/CookRecipe/GalleryStep/banh-khao-thumb-620x620.jpg"
-            alt="Bánh khảo"
+            src="https://th.bing.com/th/id/OIP.pRrNqQCwtBqlf6sez04DdwHaE8?w=292&h=195&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+            alt="Nem chua Nghệ An"
           />
         </div>
         <div className="food-content">
-          <span className="tag">Ngọt ngày xuân</span>
-          <h3>Bánh khảo – Ngọt dịu đầu năm</h3>
+          <span className="tag">Đãi khách</span>
+          <h3>Nem chua – Vị cay nồng ngày Tết</h3>
           <p>
-            Vị ngọt thanh, mềm mịn.
-            Miếng bánh nhỏ nhưng chứa đựng sự tinh tế
-            của bàn tay người làm bánh quê nhà.
+            Nem chua Nghệ An cay nhẹ, thơm tỏi và lá đinh lăng.
+            Mỗi khi có khách đến chúc Tết, đĩa nem luôn được
+            bày ra đầu tiên cùng chén rượu xuân ấm nồng.
           </p>
         </div>
       </div>
+
+          {/* CANH MĂNG */}
+    <div className="food-item reverse">
+      <div className="food-img">
+        <img
+          src="https://putaleng.vn/wp-content/uploads/2021/10/4-huong-dan-5-cach-nau-canh-mang-kho-thom-ngon-cho-ca-nha.jpg"
+          alt="Canh măng khô"
+        />
+      </div>
+      <div className="food-content">
+        <span className="tag">Mâm cỗ chính</span>
+        <h3>Canh măng khô – Hương vị sum vầy</h3>
+        <p>
+          Bát canh măng nấu móng giò thơm mùi hành,
+          vị đậm đà của nước hầm xương.
+          Đây là món không thể thiếu trong bữa cơm
+          mồng Một của nhiều gia đình Hưng Nguyên.
+        </p>
+      </div>
+    </div>
     </section>
   );
 }

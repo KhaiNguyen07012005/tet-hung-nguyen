@@ -1,67 +1,76 @@
 import { useState } from "react";
 import "./PhongTuc.css";
+import cungOngTao from "../assets/cungongtao.jpg";
 
 function PhongTuc() {
   const [active, setActive] = useState(null);
 
   const data = [
     {
-      id: 1,
-      title: "Trước Tết",
-      short: "Những ngày cuối năm rộn ràng chuẩn bị...",
-      mainImg:
-        "https://images.unsplash.com/photo-1608889175607-9b2d7f6c3c53",
+      id: "01",
+      title: "23 Tháng Chạp",
+      short: "Tiễn Ông Công Ông Táo về trời...",
+      mainImg: cungOngTao,
       content: [
-        "Những ngày cuối tháng Chạp ở Hưng Nguyên luôn rộn ràng và đầy háo hức.",
-        "Cả gia đình cùng nhau dọn dẹp nhà cửa, lau bàn thờ tổ tiên, sửa sang lại sân vườn.",
-        "Mẹ đi chợ mua lá dong, thịt lợn, đỗ xanh để chuẩn bị gói bánh chưng.",
-        "Không khí se lạnh bên dòng sông Lam khiến mùi khói bếp và mùi bánh chưng càng thêm ấm áp."
-      ],
-      gallery: [
-        "https://images.unsplash.com/photo-1608889175607-9b2d7f6c3c53",
-        "https://images.unsplash.com/photo-1545128485-c400ce7b6899"
+        "Từ sáng sớm 23 tháng Chạp, các gia đình chuẩn bị mâm cỗ tiễn Ông Công Ông Táo.",
+        "Cá chép được thả ra sông, mang theo lời cầu mong một năm mới bình an.",
+        "Không khí bắt đầu rộn ràng, chợ quê đông đúc hơn thường ngày."
       ]
     },
     {
-      id: 2,
+      id: "02",
+      title: "Những ngày cuối năm",
+      short: "Dọn dẹp, gói bánh, tất bật mà ấm áp...",
+      mainImg:
+        "https://images.unsplash.com/photo-1545128485-c400ce7b6899",
+      content: [
+        "Cả nhà cùng nhau lau dọn bàn thờ, quét sân, sửa sang lại nhà cửa.",
+        "Chiều 29 Tết, bếp lửa đỏ rực bên nồi bánh chưng nghi ngút khói.",
+        "Mùi lá dong, nếp mới và khói bếp hòa quyện trong cái lạnh cuối năm."
+      ]
+    },
+    {
+      id: "03",
       title: "Giao Thừa",
-      short: "Khoảnh khắc thiêng liêng chuyển giao năm cũ – năm mới...",
+      short: "Khoảnh khắc thiêng liêng nhất trong năm...",
       mainImg:
         "https://images.unsplash.com/photo-1577083552431-6e5fd01988a7",
       content: [
-        "Đúng 12 giờ đêm, cả nhà thắp hương trước bàn thờ tổ tiên.",
-        "Ngoài sân, tiếng pháo hoa vang lên xa xa từ thành phố Vinh.",
-        "Trẻ con háo hức nhận lì xì, người lớn chúc nhau sức khỏe và bình an.",
-        "Ở Hưng Nguyên, giao thừa không ồn ào mà ấm áp, thiêng liêng và đầy tình cảm."
-      ],
-      gallery: [
-        "https://images.unsplash.com/photo-1577083552431-6e5fd01988a7",
-        "https://images.unsplash.com/photo-1513151233558-d860c5398176"
+        "Đúng 12 giờ đêm, gia đình làm lễ cúng giao thừa trong nhà và ngoài trời.",
+        "Tiếng pháo hoa vọng lại từ xa, còn quê nhà vẫn bình yên và ấm áp.",
+        "Trẻ con nhận lì xì, người lớn chúc nhau sức khỏe và may mắn."
       ]
     },
     {
-      id: 3,
-      title: "Sau Tết",
-      short: "Du xuân, thăm hỏi và lễ hội đầu năm...",
+      id: "04",
+      title: "Mồng Một – Mồng Ba",
+      short: "Chúc Tết, hóa vàng và sum vầy...",
       mainImg:
         "https://images.unsplash.com/photo-1541542684-4b6f7a0e0f88",
       content: [
-        "Mùng 1 đi chúc Tết họ hàng, mùng 2 thăm bạn bè.",
-        "Mùng 3 nhiều gia đình đi chùa đầu năm cầu bình an.",
-        "Những buổi họp mặt đầu xuân đầy tiếng cười và chén trà ấm.",
-        "Tết ở quê không chỉ là lễ nghi mà là sự gắn kết cộng đồng."
-      ],
-      gallery: [
-        "https://images.unsplash.com/photo-1541542684-4b6f7a0e0f88",
-        "https://images.unsplash.com/photo-1513151233558-d860c5398176"
+        "Mồng 1 kiêng quét nhà để giữ lộc.",
+        "Mồng 2, mồng 3 đi chúc Tết họ hàng và thầy cô.",
+        "Nhiều gia đình làm lễ hóa vàng vào mồng 3 để tiễn ông bà."
+      ]
+    },
+    {
+      id: "05",
+      title: "Rằm Tháng Giêng",
+      short: "Khép lại mùa xuân đầu năm...",
+      mainImg:
+        "https://images.unsplash.com/photo-1513151233558-d860c5398176",
+      content: [
+        "Rằm tháng Giêng được xem là ngày lễ lớn đầu năm.",
+        "Gia đình chuẩn bị mâm cỗ cúng trang trọng.",
+        "Sau ngày này, nhịp sống thường nhật dần trở lại."
       ]
     }
   ];
 
   return (
-    <section id="phong-tuc" className="timeline-wrapper">
+    <section className="timeline-wrapper">
       <h1 className="timeline-title">
-        Hành trình đón Tết ở Hưng Nguyên
+        Hành Trình Đón Tết Ở Hưng Nguyên
       </h1>
 
       <div className="timeline">
@@ -71,11 +80,15 @@ function PhongTuc() {
             className="timeline-item"
             onClick={() => setActive(item)}
           >
-            <div className="dot"></div>
-            <div className="content">
+            <div className="number">{item.id}</div>
+
+            <div className="image-wrapper">
+              <img src={item.mainImg} alt={item.title} />
+            </div>
+
+            <div className="text">
               <h3>{item.title}</h3>
               <p>{item.short}</p>
-              <img src={item.mainImg} alt={item.title} loading="lazy" />
             </div>
           </div>
         ))}
@@ -93,13 +106,9 @@ function PhongTuc() {
               <p key={index}>{paragraph}</p>
             ))}
 
-            <div className="gallery">
-              {active.gallery.map((img, index) => (
-                <img key={index} src={img} alt="" loading="lazy" />
-              ))}
-            </div>
-
-            <button onClick={() => setActive(null)}>Đóng</button>
+            <button onClick={() => setActive(null)}>
+              Đóng
+            </button>
           </div>
         </div>
       )}
