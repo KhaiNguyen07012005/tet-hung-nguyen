@@ -2,6 +2,8 @@
 import "./PhongTuc.css";
 import cungOngTao from "../assets/cungongtao.jpg";
 import giaoThua from "../assets/giaothuaquangtruong.jpg"
+import hoaVang from "../assets/hoavang.jpg";
+import nha from "../assets/nhaminh.jpg";
 
 function PhongTuc() {
   // const [active, setActive] = useState(null);
@@ -23,7 +25,7 @@ function PhongTuc() {
       title: "Những ngày cuối năm",
       short: "Dọn dẹp, gói bánh, tất bật mà ấm áp...",
       mainImg:
-        "https://scontent.fvii2-4.fna.fbcdn.net/v/t39.30808-6/634733239_1294650289387742_1022894000041188641_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFm46oAyqz2VYmqgUhLSJLeZLCgMcNYFrxksKAxw1gWvLjEdl5sWKnxyf6D8bkHqWJ--eQDYCwiCICPR_wF7H6h&_nc_ohc=0fCsoYoIUdIQ7kNvwF--gHh&_nc_oc=AdnbYSUC76l7yVs7P3i4LfrA_fk988ZGLOO9D5sDXBlYQ37sh6AtAeLAXoB9CqtCA3lRts4GLjo3u2D_3bNSM9by&_nc_zt=23&_nc_ht=scontent.fvii2-4.fna&_nc_gid=bMwqPAXECBBjhxsMhwBDuQ&_nc_ss=8&oh=00_AfuNemsa6vZaNHo3hOtpOU_xBz3zN7obCxClvgYxp13HxQ&oe=69A96CDE",
+        nha,
       content: [
         "Cả nhà cùng nhau lau dọn bàn thờ, quét sân, sửa sang lại nhà cửa.",
         "Chiều 29 Tết, bếp lửa đỏ rực bên nồi bánh chưng nghi ngút khói.",
@@ -47,7 +49,7 @@ function PhongTuc() {
       title: "Mồng Một – Mồng Ba",
       short: "Chúc Tết, hóa vàng và sum vầy...",
       mainImg:
-        "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/2/2/1000888/Van-Khan-Cung-Ngay-M.jpeg",
+        hoaVang,
       content: [
         "Mồng 1 kiêng quét nhà để giữ lộc.",
         "Mồng 2, mồng 3 đi chúc Tết họ hàng và thầy cô.",
