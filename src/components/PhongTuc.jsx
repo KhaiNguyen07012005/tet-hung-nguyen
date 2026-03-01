@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import "./PhongTuc.css";
 import cungOngTao from "../assets/cungongtao.jpg";
-import giaoThua from "../assets/giaothuaquangtruong.jpg"
+import giaoThua from "../assets/giaothuaovinh.jpg";
 import hoaVang from "../assets/hoavang.jpg";
 import nha from "../assets/nhaminh.jpg";
 

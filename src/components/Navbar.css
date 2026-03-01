@@ -1,4 +1,4 @@
-/* Scroll progress bar */
+/* ================= SCROLL PROGRESS ================= */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -9,7 +9,7 @@
   transition: width 0.2s ease;
 }
 
-/* NAVBAR BASE */
+/* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -25,69 +25,70 @@
   transition: all 0.4s ease;
 }
 
-/* When scroll */
+/* Scroll effect */
 .navbar.scrolled {
   background: linear-gradient(90deg, #6b0000, #8b0000);
-  box-shadow: 0 5px 25px rgba(255, 215, 0, 0.4);
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.25);
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
 .logo {
   font-size: 22px;
   font-weight: 700;
   color: gold;
   cursor: pointer;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .logo:hover {
   transform: scale(1.05);
 }
 
-/* MENU */
+/* ================= MENU ================= */
 .menu {
   display: flex;
-  gap: 30px;
+  gap: 35px;
+  align-items: center;
 }
 
+/* Menu item base */
 .menu-item {
   position: relative;
   cursor: pointer;
   font-weight: 500;
   color: white;
-  transition: 0.3s;
+  padding: 6px 0;
+  transition: color 0.3s ease;
 }
 
-/* Hover */
+/* Hover chỉ đổi màu */
 .menu-item:hover {
   color: gold;
 }
 
-/* Underline animation */
+/* Underline */
 .menu-item::after {
   content: "";
   position: absolute;
-  bottom: -6px;
+  bottom: 0; /* sát chữ */
   left: 0;
-  width: 0%;
+  width: 0;
   height: 2px;
   background: gold;
   transition: width 0.3s ease;
 }
 
-.menu-item:hover::after,
+/* Active luôn có line */
+.menu-item.active {
+  color: gold;
+  font-weight: 600;
+}
+
 .menu-item.active::after {
   width: 100%;
 }
 
-/* Active glow */
-.menu-item.active {
-  color: gold;
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
-}
-
-/* Hamburger */
+/* ================= HAMBURGER ================= */
 .hamburger {
   display: none;
   font-size: 24px;
@@ -95,7 +96,7 @@
   cursor: pointer;
 }
 
-/* Responsive */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 20px;
@@ -108,7 +109,7 @@
     background: #8b0000;
     flex-direction: column;
     width: 220px;
-    padding: 20px;
+    padding: 25px 20px;
     gap: 20px;
     transform: translateY(-200%);
     transition: 0.4s ease;
@@ -117,6 +118,10 @@
 
   .menu.open {
     transform: translateY(0);
+  }
+
+  .menu-item {
+    width: 100%;
   }
 
   .hamburger {

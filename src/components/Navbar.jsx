@@ -45,7 +45,7 @@ const sections = [
           }
         });
       },
-      { threshold: 0.6 }
+      { threshold: 0.3 }
     );
 
     sections.forEach((section) => {
@@ -78,7 +78,7 @@ const sections = [
 
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="logo" onClick={() => scrollTo("home")}>
-          🌸 Tết Hưng Nguyên 🌸
+           Tết Hưng Nguyên 
         </div>
 
         <div className={`menu ${open ? "open" : ""}`}>
