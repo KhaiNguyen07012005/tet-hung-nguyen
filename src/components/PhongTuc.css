@@ -1,6 +1,7 @@
 .timeline-wrapper {
   position: relative;
   padding: 120px 20px;
+   color: rgb(179, 0, 0);
   background: linear-gradient(to bottom, #fdf6e3, #fff);
   text-align: center;
 }
