@@ -36,26 +36,22 @@ const sections = [
   }, []);
 
   // Scroll spy
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActive(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
+useEffect(() => {
+  const handleScroll = () => {
     sections.forEach((section) => {
       const el = document.getElementById(section.id);
-      if (el) observer.observe(el);
+      if (!el) return;
+
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= 150 && rect.bottom >= 150) {
+        setActive(section.id);
+      }
     });
+  };
 
-    return () => observer.disconnect();
-  }, []);
-
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
   const scrollTo = (id) => {
     const section = document.getElementById(id);
     if (!section) return;
