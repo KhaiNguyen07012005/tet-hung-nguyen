@@ -126,7 +126,6 @@
 /* ============================= */
 /* ===== MODAL ===== */
 /* ============================= */
-
 .modal {
   position: fixed;
   inset: 0;
@@ -138,6 +137,22 @@
   z-index: 999;
 }
 
+.modal-content {
+  background: white;
+  padding: 0;              /* 👈 bỏ padding */
+  border-radius: 20px;
+  overflow: hidden;        /* 👈 quan trọng */
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
 .modal-content video {
   width: 90%;
   max-width: 900px;
