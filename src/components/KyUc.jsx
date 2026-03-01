@@ -44,7 +44,7 @@ function KyUc() {
   ];
 
   return (
-    <section className="kyuc-wrapper">
+    <section id="ky-uc" className="kyuc-wrapper">
       <h2 className="kyuc-heading">Nhật Ký Tết</h2>
 
       <Swiper

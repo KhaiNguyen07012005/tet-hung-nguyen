@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <footer className="footer">
-      Nguyễn Đình Khải
+      Nhập môn lập trình Web và Ứng dụng - Đại học Công nghệ Sài Gòn - 2026
     </footer>
   );
 }

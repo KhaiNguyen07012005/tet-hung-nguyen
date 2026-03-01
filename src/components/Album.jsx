@@ -3,10 +3,22 @@ import "./Album.css";
 import banPhaoHoa from "../assets/banphaohoa.mp4";
 import choXua from "../assets/choXua.png";
 import choTet from "../assets/choTet.mp4";
-
-function Album() {
+import diChua from "../assets/dichua.mp4";
+import anh1 from "../assets/tetquangtruong.jpg";
+import anh2 from "../assets/dichuacungm1.jpg";
+import anh3 from "../assets/nguyenlieubanhchung.jpg";
+import anh4 from "../assets/connguaquangtruong.JPG";
+import anh5 from "../assets/lixi.PNG";
+import anh6 from "../assets/danhbai1.jpg";
+import anh7 from "../assets/chua1.PNG";
+import anh8 from "../assets/chua2.PNG";
+import anh9 from "../assets/hoadao.jpg";
+import anh10 from "../assets/hoilangdaunam.PNG";
+import anh11 from "../assets/chenchuchenanh.PNG";
+import anh12 from "../assets/hoamai.JPG";
+function Album() {  
   const [selectedVideo, setSelectedVideo] = useState(null);
-
+  const personalPhotos = [anh1, anh2, anh3, anh4, anh5, anh6, anh7, anh8, anh9,anh10, anh11, anh12];
   const albums = [
     {
       title: "Chợ Tết",
@@ -22,7 +34,7 @@ function Album() {
       oldImg:
         "https://chuathanhlangson.com/uploads/news/2019_02/001_7.jpg",
       newImg:
-        "https://images.unsplash.com/photo-1576085898323-218337e3e43c?auto=format&fit=crop&w=1200&q=80",
+        "https://dienmaynguyenkhoi.vn/wp-content/uploads/2023/02/nang-suat-nau-banh-chung-nhom.jpg",
       description:
         "Vẫn là nồi bánh đêm 30, nhưng không khí hôm nay đã khác."
     }
@@ -30,8 +42,8 @@ function Album() {
 
   const videos = [
     {
-      title: "Gói bánh chưng",
-      src: "https://www.w3schools.com/html/mov_bbb.mp4"
+      title: "Đi chùa đầu năm",
+      src: diChua,
     },
     {
       title: "Chợ Tết quê",
@@ -86,20 +98,40 @@ function Album() {
           ))}
         </div>
       </div>
+    
 
       {/* Modal Video */}
-      {selectedVideo && (
-        <div className="modal" onClick={() => setSelectedVideo(null)}>
-          <div
-            className="modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <video controls autoPlay>
-              <source src={selectedVideo} type="video/mp4" />
-            </video>
-          </div>
-        </div>
+  {selectedVideo && (
+  <div className="modal" onClick={() => setSelectedVideo(null)}>
+    <div
+      className="modal-content"
+      onClick={(e) => e.stopPropagation()}
+    >
+      {selectedVideo.endsWith(".mp4") ? (
+        <video controls autoPlay>
+          <source src={selectedVideo} type="video/mp4" />
+        </video>
+      ) : (
+        <img src={selectedVideo} alt="Preview" />
       )}
+    </div>
+  </div>
+)}
+      {/* ẢNH CÁ NHÂN */}
+      <div className="personal-section">
+        <h2>Khoảnh khắc của tôi</h2>
+
+        <div className="personal-grid">
+          {personalPhotos.map((photo, index) => (
+            <img
+              key={index}
+              src={photo}
+              alt="Personal"
+              onClick={() => setSelectedVideo(photo)} // tái sử dụng modal
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }

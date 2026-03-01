@@ -1,9 +1,10 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./PhongTuc.css";
 import cungOngTao from "../assets/cungongtao.jpg";
+import giaoThua from "../assets/giaothuaquangtruong.jpg"
 
 function PhongTuc() {
-  const [active, setActive] = useState(null);
+  // const [active, setActive] = useState(null);
 
   const data = [
     {
@@ -22,7 +23,7 @@ function PhongTuc() {
       title: "Những ngày cuối năm",
       short: "Dọn dẹp, gói bánh, tất bật mà ấm áp...",
       mainImg:
-        "https://images.unsplash.com/photo-1545128485-c400ce7b6899",
+        "https://scontent.fvii2-4.fna.fbcdn.net/v/t39.30808-6/634733239_1294650289387742_1022894000041188641_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFm46oAyqz2VYmqgUhLSJLeZLCgMcNYFrxksKAxw1gWvLjEdl5sWKnxyf6D8bkHqWJ--eQDYCwiCICPR_wF7H6h&_nc_ohc=0fCsoYoIUdIQ7kNvwF--gHh&_nc_oc=AdnbYSUC76l7yVs7P3i4LfrA_fk988ZGLOO9D5sDXBlYQ37sh6AtAeLAXoB9CqtCA3lRts4GLjo3u2D_3bNSM9by&_nc_zt=23&_nc_ht=scontent.fvii2-4.fna&_nc_gid=bMwqPAXECBBjhxsMhwBDuQ&_nc_ss=8&oh=00_AfuNemsa6vZaNHo3hOtpOU_xBz3zN7obCxClvgYxp13HxQ&oe=69A96CDE",
       content: [
         "Cả nhà cùng nhau lau dọn bàn thờ, quét sân, sửa sang lại nhà cửa.",
         "Chiều 29 Tết, bếp lửa đỏ rực bên nồi bánh chưng nghi ngút khói.",
@@ -34,7 +35,7 @@ function PhongTuc() {
       title: "Giao Thừa",
       short: "Khoảnh khắc thiêng liêng nhất trong năm...",
       mainImg:
-        "https://images.unsplash.com/photo-1577083552431-6e5fd01988a7",
+        giaoThua,
       content: [
         "Đúng 12 giờ đêm, gia đình làm lễ cúng giao thừa trong nhà và ngoài trời.",
         "Tiếng pháo hoa vọng lại từ xa, còn quê nhà vẫn bình yên và ấm áp.",
@@ -46,7 +47,7 @@ function PhongTuc() {
       title: "Mồng Một – Mồng Ba",
       short: "Chúc Tết, hóa vàng và sum vầy...",
       mainImg:
-        "https://images.unsplash.com/photo-1541542684-4b6f7a0e0f88",
+        "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/2/2/1000888/Van-Khan-Cung-Ngay-M.jpeg",
       content: [
         "Mồng 1 kiêng quét nhà để giữ lộc.",
         "Mồng 2, mồng 3 đi chúc Tết họ hàng và thầy cô.",
@@ -68,7 +69,7 @@ function PhongTuc() {
   ];
 
   return (
-    <section className="timeline-wrapper">
+    <section id="phong-tuc" className="timeline-wrapper">
       <h1 className="timeline-title">
         Hành Trình Đón Tết Ở Hưng Nguyên
       </h1>
@@ -78,7 +79,7 @@ function PhongTuc() {
           <div
             key={item.id}
             className="timeline-item"
-            onClick={() => setActive(item)}
+            // onClick={() => setActive(item)}
           >
             <div className="number">{item.id}</div>
 
@@ -94,7 +95,7 @@ function PhongTuc() {
         ))}
       </div>
 
-      {active && (
+      {/* {active && (
         <div className="overlay" onClick={() => setActive(null)}>
           <div
             className="overlay-content"
@@ -111,7 +112,7 @@ function PhongTuc() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </section>
   );
 }

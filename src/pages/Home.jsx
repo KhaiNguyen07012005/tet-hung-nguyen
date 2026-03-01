@@ -9,6 +9,7 @@ import VanHoa from "../components/VanHoa";
 import Album from "../components/Album";
 import Footer from "../components/Footer";
 import KyUc from "../components/KyUc";
+import LienHe from "../components/LienHe";
 
 
 function Home() {
@@ -17,7 +18,7 @@ function Home() {
     useEffect(() => {
     const timer = setTimeout(() => {
       setShowConfetti(false);
-    }, 5000); // pháo hoa 5 giây
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -186,9 +187,9 @@ function Home() {
         <AmThuc />
         <VanHoa />
         <Album />
- 
         <KyUc />
-               <Footer />
+        <LienHe/>
+        <Footer />
 
     </div>
   );
