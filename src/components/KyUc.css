@@ -72,12 +72,17 @@
 }
 
 .modal-content {
-  background: white;
-  padding: 50px;
-  border-radius: 20px;
-  width: 600px;
-  max-width: 90%;
-  animation: scaleUp 0.4s ease;
+  background: #fff;
+  width: 700px;
+  max-width: 92%;
+  padding: 30px 70px;
+  border-radius: 28px;
+  position: relative;
+  display: flex;
+  flex-direction: column;   /* QUAN TRỌNG */
+  gap: 10px;                /* tạo khoảng thở */
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
 }
 
 .modal-content h2 {
